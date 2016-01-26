@@ -1,0 +1,5 @@
+sort ~/data/Bidder.del | uniq
+sort ~/data/Seller.del | uniq
+sort ~/data/Item.del | uniq
+sort ~/data/ItemBid.del | uniq
+sort ~/data/ItemCategory.del | uniq

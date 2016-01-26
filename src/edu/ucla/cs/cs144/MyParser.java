@@ -232,7 +232,10 @@ class MyParser {
         writers[0].print(columnSeparator);
         writers[0].print(strip(getElementText(first_Bid)));
         writers[0].print(columnSeparator);
-        writers[0].print(getElementText(number_of_Bids));
+        if((getElementText(number_of_Bids)).equals(""))
+            writers[0].print("0");
+        else
+            writers[0].print(getElementText(number_of_Bids));
         writers[0].print(columnSeparator);
         
         //check location
@@ -291,7 +294,7 @@ class MyParser {
             writers[2].print(columnSeparator);
             writers[2].print(sdf.format(timeDate));
             writers[2].print(columnSeparator);
-            writers[2].print(getElementText(amount));
+            writers[2].print(strip(getElementText(amount)));
             writers[2].print(columnSeparator);
             writers[2].print("\n");
             
@@ -339,9 +342,10 @@ class MyParser {
         }
         
         /* Create writer for all the output files */
+        String home = System.getProperty("user.home");
         for(int i = 0; i < table.length; i++)
         {
-            String fileName = table[i] + ".del";
+            String fileName = home + "/data/" + table[i] + ".del";
             try {
               File file = new File(fileName);
               
