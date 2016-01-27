@@ -22,11 +22,10 @@ CREATE TABLE Item(
 	PRIMARY KEY(ItemID)
 	);
 
-select SellerID from Item;
-
 CREATE TABLE ItemCategory(
 	ItemID INT NOT NULL,
-	Category VARCHAR(50)
+	Category VARCHAR(50),
+	PRIMARY KEY(ItemID, Category)
 	);
 
 CREATE TABLE Bidder(
@@ -41,5 +40,6 @@ CREATE TABLE ItemBid(
 	ItemID INT NOT NULL,
 	BidderID VARCHAR(50) NOT NULL,
 	Time TIMESTAMP,
-	Amount DECIMAL(8,2)
+	Amount DECIMAL(8,2),
+	PRIMARY KEY(ItemID, BidderID, Time)
 	);

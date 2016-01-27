@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+   text-align: center;
+  height: 80px;     
+ background-color: yellow;
+ font-size: 35pt; 
+}
+
+#column{
+	position: fixed;
+	top: 80px;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	height: calc(100% - 80px - 1em);
+	width: 100%;
+    overflow-y: auto;
+}
+
+#column1 {
+	position: absolute;
+	overflow-y: visible; 
+	top: 0;
+	left: 1em;
+	bottom: 1em;
+	width: calc(50% - 2em);
+	height: 100%;
+}
+
+
+#column2 {
+	position: absolute;
+	overflow-y: visible; 
+	top: 0;
+	right: 1em;
+	bottom: 1em;
+	width: calc(50% - 2em);
+	height: 100%;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: right;
+	height: 1em;
+	background-color: cyan;
+}
+
+</style>
+
+<header>
+	CSS Layout Project
+</header>
+
+<iframeset id="column" SCROLLING = YES>
+
+<iframe id="column1" src="column1.html" frameBorder="0"> </iframe>
+
+<iframe id="column2" src="column2.html" frameBorder="0"> </iframe>
+
+</iframeset>
+
+<footer>
+	&copy Copyright by University of California, Los Angeles (UCLA)
+</footer>
+</html>

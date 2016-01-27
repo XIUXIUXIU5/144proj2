@@ -11,6 +11,9 @@ mysql CS144 < create.sql
 ant
 ant run-all
 
+sort -u ~/data/Item.del
+sort -u ~/data/ItemCategory.del
+sort -u ~/data/ItemBid.del
 sort -u ~/data/Bidder.del
 sort -u ~/data/Seller.del
 
