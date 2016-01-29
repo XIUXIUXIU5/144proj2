@@ -6,6 +6,7 @@ Bidder(UserID[key],Rating,Location,Country)
 Seller(UserID[key],Rating) 
 
 2.
+ItemID -> (Name, Currently, Buy_Price, First_Bid, Number_of_Bids, Location, Latitude, Logitude, Country, Started, Ends, SellerID, Description)
 BidderID -> {Rating,Location,Country}
 ItemID,BidderID,Time -> {Amount}
 ItemID ->> Category
