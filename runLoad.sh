@@ -11,12 +11,12 @@ mysql CS144 < create.sql
 ant
 ant run-all
 
-sort ~/data/Item.del | uniq
-sort ~/data/ItemCategory.del | uniq
-sort ~/data/ItemBid.del | uniq
-sort ~/data/Bidder.del | uniq
-sort ~/data/Seller.del | uniq
+sort Item.del | uniq
+sort ItemCategory.del | uniq
+sort ItemBid.del | uniq
+sort Bidder.del | uniq
+sort Seller.del | uniq
 
 mysql CS144 < load.sql
 
-rm ~/data/*.del
+rm *.del

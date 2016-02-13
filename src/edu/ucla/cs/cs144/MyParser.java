@@ -241,14 +241,14 @@ class MyParser {
         //check location
         writers[0].print(getElementText(location));
         writers[0].print(columnSeparator);
-        Element latitude = getElementByTagNameNR(location,"Latitude");
-        Element logitude = getElementByTagNameNR(location,"Longitude");
+        Attr latitude = location.getAttributeNode("Latitude");
+        Attr logitude = location.getAttributeNode("Longitude");
         if(latitude != null)
-            writers[0].print(getElementText(latitude));
+            writers[0].print(latitude.getValue());
         writers[0].print(columnSeparator);
         
         if(logitude != null)
-            writers[0].print(getElementText(logitude));
+            writers[0].print(logitude.getValue());
         writers[0].print(columnSeparator);
         
         writers[0].print(getElementText(country));
@@ -342,10 +342,9 @@ class MyParser {
         }
         
         /* Create writer for all the output files */
-        String home = System.getProperty("user.home");
         for(int i = 0; i < table.length; i++)
         {
-            String fileName = home + "/data/" + table[i] + ".del";
+            String fileName = table[i] + ".del";
             try {
               File file = new File(fileName);
               
